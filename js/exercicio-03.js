@@ -1,10 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){
-  // Um array sempre comeca com zero
+  //var fotos = $('.galeria-fotos');
 
-  // Tipagem
-  // Dois tipos de linguagens
-  // Fortemente tipadas
-  // Fracamente tipadas
+  // Um array sempre comeca com zero
 
   var fotos = document.querySelectorAll('.galeria-foto');
   var i     = 1;
