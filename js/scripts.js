@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function(){
       destaque.setAttribute('src', caminho);
 
 
-
       /* --- thumb ativo --- */
       var thumbAtual = document.querySelector('.galeria-ativo');
 
