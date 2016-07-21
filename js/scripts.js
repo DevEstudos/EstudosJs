@@ -10,15 +10,23 @@ document.addEventListener('DOMContentLoaded', function(){
   var i     = 0;
   var total = fotos.length - 1;
 
-  console.log(total);
-
   for (i; i <= total; i++) {
     fotos[i].addEventListener('click', function(){
-      var caminho = this.getAttribute('src');
 
+      /* --- trocar imagem --- */
+      var caminho = this.getAttribute('src');
       var destaque = document.querySelector('.galeria-destaque');
 
       destaque.setAttribute('src', caminho);
+
+
+
+      /* --- thumb ativo --- */
+      var thumbAtual = document.querySelector('.galeria-ativo');
+
+      thumbAtual.classList.remove('galeria-ativo');
+
+      this.classList.add('galeria-ativo');
     });
 
   }
