@@ -7,8 +7,10 @@ document.addEventListener('DOMContentLoaded', function(){
   // Fracamente tipadas
 
   var fotos = document.querySelectorAll('.galeria-foto');
-  var i     = 1;
+  var i     = 0;
   var total = fotos.length - 1;
+
+  console.log(total);
 
   for (i; i <= total; i++) {
     fotos[i].addEventListener('click', function(){
