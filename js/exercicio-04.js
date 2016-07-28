@@ -9,3 +9,10 @@
 // document.querySelector('.galeria-foto').classList.remove('galeria-ativo');
 
 // document.querySelector('.galeria-foto').classList.contains('galeria-ativo');
+
+
+
+
+// document.querySelector('.galeria-ativo').classList.remove('galeria-ativo');
+
+// this.classList.add('galeria-ativo');
