@@ -45,11 +45,10 @@
 }
 .galeria-foto {
   float:left;
-  /*opacity:.2;*/
+  opacity:.2;
   width:100%;
 }
 
 .galeria-ativo {
-  cursor:default;
   opacity:1;
 }
