@@ -1,33 +1,16 @@
 document.addEventListener('DOMContentLoaded', function(){
-  // Um array sempre comeca com zero
 
-  // Tipagem
-  // Dois tipos de linguagens
-  // Fortemente tipadas
-  // Fracamente tipadas
+  var galeriaDestaque = document.querySelector('.galeria-destaque');
+  var galeriaFotos    = document.querySelectorAll('.galeria-foto');
 
-  var fotos = document.querySelectorAll('.galeria-foto');
-  var i     = 0;
-  var total = fotos.length - 1;
+  function galeriaTrocar() {
+    var galeriaClicado = this.getAttribute('src');
 
-  for (i; i <= total; i++) {
-    fotos[i].addEventListener('click', function(){
+    galeriaDestaque.setAttribute('src', galeriaClicado);
+  }
 
-      /* --- trocar imagem --- */
-      var caminho = this.getAttribute('src');
-      var destaque = document.querySelector('.galeria-destaque');
-
-      destaque.setAttribute('src', caminho);
-
-
-      /* --- thumb ativo --- */
-      var thumbAtual = document.querySelector('.galeria-ativo');
-
-      thumbAtual.classList.remove('galeria-ativo');
-
-      this.classList.add('galeria-ativo');
-    });
-
+  for (var i = 0; i < galeriaFotos.length; i++) {
+    galeriaFotos[i].addEventListener('click', galeriaTrocar);
   }
 
 });

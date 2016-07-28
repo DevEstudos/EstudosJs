@@ -45,7 +45,7 @@
 }
 .galeria-foto {
   float:left;
-  opacity:.2;
+  /*opacity:.2;*/
   width:100%;
 }
 
