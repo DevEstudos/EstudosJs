@@ -1,14 +1,16 @@
-function galeria(destaque, fotos, alt) {
-
+function galeria(destaque, fotos, callback) {
   for (var i = 0; i < fotos.length; i++) {
     fotos[i].addEventListener('click', function(){
       var clicado  = this.getAttribute('src');
-      var textoAlt = this.getAttribute('alt');
+      var texto    = this.getAttribute('alt');
 
       trocarFoto(clicado);
 
-      if (alt == true) {
-        mostrarAlt(textoAlt);
+      if (typeof callback == 'function') {
+        callback();
+      }
+      else {
+        mostraTexto(texto);
       }
     });
   }
@@ -17,8 +19,8 @@ function galeria(destaque, fotos, alt) {
     destaque.setAttribute('src', clicado);
   }
 
-  function mostrarAlt(textoAlt) {
-    alert(textoAlt);
+  function mostraTexto(texto) {
+    alert(texto);
   }
 
 }
